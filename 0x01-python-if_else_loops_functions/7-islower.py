@@ -10,3 +10,5 @@ def islower(c):
         return (True)
     elif c >= 'A' and c <= 'Z':
         return (False)
+    else:
+        return None
