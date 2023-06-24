@@ -1,4 +1,5 @@
-#!/usr/bin/python3
-islower = __import__('7-islower').islower
+#!/usr/bin/env python3
+uppercase = __import__('8-uppercase').uppercase
 
-print("'' => {}".format("lower" if islower("") else "upper"))
+uppercase("best")
+uppercase("Best School 98 Battery street")
