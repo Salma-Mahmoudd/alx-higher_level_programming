@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    """Function that prints the numbers from 
+    """Function that prints the numbers from
         1 to 100 separated by a space.
-        For multiples of three print Fizz instead of 
+        For multiples of three print Fizz instead of
         the number and for multiples of five print Buzz.
         prints the numbers from 1 to 100 separated by a space.
     Args:
