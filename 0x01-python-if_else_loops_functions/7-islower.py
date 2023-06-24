@@ -6,9 +6,7 @@ def islower(c):
     Return:
         True or False
     """
-    if c >= 'a' and c <= 'z':
+    if ord(c) > 96 and ord(c) < 123:
         return (True)
-    elif c >= 'A' and c <= 'Z':
-        return (False)
     else:
-        return None
+        return (False)
