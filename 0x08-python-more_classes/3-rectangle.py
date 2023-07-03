@@ -14,8 +14,8 @@ class Rectangle:
             height: height of rectangle.
         """
 
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -54,5 +54,5 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        rec = ((self.__height - 1) * ((self.__width * '#') + '\n')) + (self.__width * '#')
-        return rec
+        rec = ((self.__height - 1) * ((self.__width * '#') + '\n'))
+        return rec + (self.__width * '#')
