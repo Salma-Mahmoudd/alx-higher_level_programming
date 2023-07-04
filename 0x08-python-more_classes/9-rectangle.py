@@ -9,14 +9,6 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """
-        A new object.
-
-        Args:
-            width: width of rectangle.
-            height: height of rectangle.
-        """
-
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
@@ -56,15 +48,11 @@ class Rectangle:
         return peri
 
     def __str__(self):
-        string = ""
         if self.__width == 0 or self.__height == 0:
-            return string
-        for i in range(self.__height):
-            for j in range(self.__width):
-                string = string + str(self.print_symbol)
-            if i != self.__height - 1:
-                string = string + '\n'
-        return string
+            return ""
+        s = str(self.print_symbol)
+        rec = ((self.__height - 1) * ((self.__width * s) + '\n'))
+        return rec + (self.__width * s)
 
     def __repr__(self):
         repr = f"Rectangle({self.__width}, {self.__height})"
@@ -86,11 +74,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """
-        New square rect
-
-        Args:
-            size: the width & height.
-        """
-
         return Rectangle(size, size)
