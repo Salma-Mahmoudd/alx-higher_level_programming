@@ -38,10 +38,6 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """calculate the area
-        Returns:
-            the area
-        """
         area = self.__width * self.__height
         return area
 
