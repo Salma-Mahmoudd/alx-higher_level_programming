@@ -11,7 +11,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
-        Rectangle.number_of_instances = Rectangle.number_of_instances + 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -38,6 +38,10 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """calculate the area
+        Returns:
+            the area
+        """
         area = self.__width * self.__height
         return area
 
