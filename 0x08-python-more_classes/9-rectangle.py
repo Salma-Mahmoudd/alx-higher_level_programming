@@ -84,5 +84,4 @@ class Rectangle:
     def square(cls, size=0):
         """Class Method"""
 
-        if type(size) == int:
-            return cls(size, size)
+        return (cls(size, size))
