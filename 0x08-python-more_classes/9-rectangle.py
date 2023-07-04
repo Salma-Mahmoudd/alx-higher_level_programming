@@ -56,11 +56,15 @@ class Rectangle:
         return peri
 
     def __str__(self):
+        string = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
-        s = str(self.print_symbol)
-        rec = ((self.__height - 1) * ((self.__width * s) + '\n'))
-        return rec + (self.__width * s)
+            return string
+        for i in range(self.__height):
+            for j in range(self.__width):
+                string = string + str(self.print_symbol)
+            if i != self.__height - 1:
+                string = string + '\n'
+        return string
 
     def __repr__(self):
         repr = f"Rectangle({self.__width}, {self.__height})"
