@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Lockup function"""
+
+
 def lookup(obj):
     """
     Function that returns the list of
