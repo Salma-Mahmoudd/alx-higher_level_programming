@@ -4,6 +4,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """size must be private and positive"""
     def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
