@@ -77,42 +77,4 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = value
-
-    def area(self):
-        """Area of rec"""
-        area = self.__width * self.__height
-        return area
-
-    def display(self):
-        """ prints the Rectangle instance with the character #"""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        s = "#"
-        rec = ((self.__height - 1)*((' '*self.__x)+(self.__width * s)+'\n'))
-        print("\n" * self.__y, end="")
-        print(f"{rec + ((' '*self.__x)+self.__width * s)}")
-
-    def __str__(self):
-        """ returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        s = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
-        return f"{s}{self.__width}/{self.__height}"
-
-    def update(self, *args):
-        """Update the class Rectangle.
-
-        Args:
-            *args: 5 or less args
-                1st argument should be the id attribute
-                2nd argument should be the width attribute
-                3rd argument should be the height attribute
-                4th argument should be the x attribute
-                5th argument should be the y attribute
-        """
-        j = 0
-        for i in ["id", "width", "height", "x", "y"]:
-            if j < len(args):
-                setattr(self, i, args[j])
-                j += 1
-            else:
-                break
+        self.__y = valu
