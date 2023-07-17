@@ -124,9 +124,7 @@ class Rectangle(Base):
                     break
 
     def to_dictionary(self):
-        dic = {'x': self.x,
-                'y': self.y,
-                'id': self.id,
-                'height': self.height,
-                'width': self.width}
+        """ returns the dictionary representation of a Rectangle"""
+        dic = {'x': self.x, 'y': self.y, 'id': self.id}
+        dic.update({'height': self.__height, 'width': self.__width})
         return dic
