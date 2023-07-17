@@ -112,12 +112,13 @@ class Rectangle(Base):
             **kwargs:  assigns a key/value argument to attributes
         """
         if kwargs is not None:
-            for key, value in kwargs.iteritems():
-                settattr(self, key, value)
-        j = 0
-        for i in ["id", "width", "height", "x", "y"]:
-            if j < len(args):
-                setattr(self, i, args[j])
-                j += 1
-            else:
-                break
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            j = 0
+            for i in ["id", "width", "height", "x", "y"]:
+                if j < len(args):
+                    setattr(self, i, args[j])
+                    j += 1
+                else:
+                    break
