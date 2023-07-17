@@ -33,3 +33,10 @@ class Base:
                 jfile.write(Base.to_json_string(list))
             else:
                 jfile.write("[]")
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
+        if json_string is not None:
+            return json.loads(json_string)
+        return "[]"
