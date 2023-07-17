@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Base class"""
+
+
 class Base:
+    """Base class has id for each object"""
     __nb_objects = 0
 
     def __init__(self, id=None):
