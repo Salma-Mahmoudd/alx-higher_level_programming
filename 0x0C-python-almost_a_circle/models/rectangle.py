@@ -122,3 +122,11 @@ class Rectangle(Base):
                     j += 1
                 else:
                     break
+
+    def to_dictionary(self):
+        dic = {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width}
+        return dic

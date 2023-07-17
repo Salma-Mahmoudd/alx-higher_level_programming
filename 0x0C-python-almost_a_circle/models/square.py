@@ -62,3 +62,10 @@ class Square(Rectangle):
                     j += 1
                 else:
                     break
+
+    def to_dictionary(self):
+        dic = {'id': self.id,
+                'x': self.x,
+                'size': self.size,
+                'y': self.y}
+        return dic
