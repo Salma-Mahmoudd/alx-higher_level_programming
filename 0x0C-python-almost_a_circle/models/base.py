@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Base class"""
+import json
 
 
 class Base:
@@ -16,6 +17,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ returns the JSON string representation of list_dictionaries"""
-        if list_dictionaries or list_dictionaries == []:
-            return "[]"
-        return json.dumps(list_dictionaries)
+        if list_dictionaries is not None:
+            return json.dumps(list_dictionaries)
+        return "[]"
