@@ -111,7 +111,7 @@ class Rectangle(Base):
                 5th argument should be the y attribute
             **kwargs:  assigns a key/value argument to attributes
         """
-        if kwargs is not None:
+        if kwargs.items():
             for key, value in kwargs.items():
                 setattr(self, key, value)
         else:
