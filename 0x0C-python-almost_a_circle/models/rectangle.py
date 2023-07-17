@@ -9,6 +9,13 @@ class Rectangle(Base):
     width, height, x and y must be positive
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialization attributes of new object.
+        Args:
+            width: the width of rec.
+            height: the height of rec.
+            x: the coordinate of rec in x axis
+            y: the coordinate of rec in y axis
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -17,22 +24,27 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """get the width"""
         return self.__width
 
     @property
     def height(self):
+        """get the height"""
         return self.__height
 
     @property
     def x(self, x):
+        """get the x"""
         return self.__x
 
     @property
     def y(self, y):
+        """get the y"""
         return self.__y
 
     @width.setter
     def width(self, value):
+        """set the width"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -41,6 +53,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """set the height"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -49,6 +62,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """set the x"""
         if type(value) != int:
             raise TypeError("x  must be an integer")
         if value < 0:
@@ -57,6 +71,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """set the y"""
         if type(value) != int:
             raise TypeError("y  must be an integer")
         if value < 0:
@@ -64,10 +79,12 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Area of rec"""
         area = self.__width * self.__height
         return area
 
     def display(self):
+        """ prints the Rectangle instance with the character #"""
         if self.__width == 0 or self.__height == 0:
             return ""
         s = "#"
