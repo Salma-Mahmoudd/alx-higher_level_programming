@@ -55,9 +55,11 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances"""
         File = str(cls.__name__) + ".json"
-        with open(File, 'r') as jfile:
+        try:
             list = []
-            for i in Base.from_json_string(jfile.read()):
-                list.append(cls.create(**i))
+            with open(File, 'r') as jfile:
+                for i in Base.from_json_string(jfile.read()):
+                    list.append(cls.create(**i))
             return list
-        return []
+        except Exception:
+            return []
