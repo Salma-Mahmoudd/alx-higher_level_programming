@@ -53,7 +53,7 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    def x(self, x):
+    def x(self):
         """get the x"""
         return self.__x
 
@@ -67,7 +67,7 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    def y(self, y):
+    def y(self):
         """get the y"""
         return self.__y
 
