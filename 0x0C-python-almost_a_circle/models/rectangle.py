@@ -17,11 +17,11 @@ class Rectangle(Base):
             x: the coordinate of rec in x axis
             y: the coordinate of rec in y axis
         """
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -89,9 +89,9 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             return ""
         s = "#"
-        rec = ((self.__height - 1)*((' '*self.__y)+(self.__width * s)+'\n'))
+        rec = ((self.__height - 1)*((' '*self.__x)+(self.__width * s)+'\n'))
         print("\n" * self.__y, end="")
-        print(f"{rec + ((' '*self.__y)+self.__width * s)}")
+        print(f"{rec + ((' '*self.__x)+self.__width * s)}")
 
     def __str__(self):
         """ returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
