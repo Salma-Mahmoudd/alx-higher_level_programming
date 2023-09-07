@@ -1,11 +1,6 @@
 -- script that creates a table "second_table"
-CREATE TABLE IF NOT EXISTS second_table (
-	id INT,
-	name VARCHAR(256),
-	score INT
-);
-INSERT INTO second_table (id, name, score)
-VALUES
+CREATE TABLE IF NOT EXISTS second_table (id INT, name VARCHAR(256), score INT);
+INSERT INTO second_table (id, name, score) VALUES
 	(1, 'Jogn', 10),
 	(2, 'Alex', 3),
 	(3, 'Bob', 14),
