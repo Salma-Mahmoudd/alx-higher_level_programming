@@ -14,4 +14,4 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for c in session.query(City).order_by(City.id):
-        print(f"\t{c.id}: {c.name} -> {c.state.name}")
+        print(f"{c.id}: {c.name} -> {c.state.name}")
